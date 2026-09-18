@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Spice Cart — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:  #FAF6EE;
+    --card:   #FFFFFF;
+    --ink:    #2B2B28;
+    --muted:  #6F6A60;
+    --accent: #8C2F1D;
+    --gold:   #C9A227;
+    --line:   #E3DCCD;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 48px 20px 72px;
+    background-color: var(--paper);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  .menu {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .menu__header {
+    text-align: center;
+    padding: 0 0 36px;
+    border-bottom: 1px solid var(--gold);
+    margin-bottom: 48px;
+  }
+
+  .menu__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .menu__tagline {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 14px 0 0;
+  }
+
+  .section {
+    margin-bottom: 56px;
+  }
+
+  .section__heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 10px;
+    margin: 0 0 28px;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .card__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 0 14px;
+    background-color: #f0ebe1;
+  }
+
+  .card__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 0 8px;
+  }
+
+  .card__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .card__price {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--accent);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .card__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .footer {
+    text-align: center;
+    border-top: 1px solid var(--gold);
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+
+  .footer__note {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<main class="menu">
+  <header class="menu__header">
+    <h1 class="menu__title">The Spice Cart</h1>
+    <p class="menu__tagline">Home-style South Indian cooking, served fresh all day</p>
+  </header>
+
+  <section class="section">
+    <h2 class="section__heading">Breakfast</h2>
+    <div class="grid">
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600&auto=format&fit=crop&q=80" alt="Golden rava dosa folded with coconut chutney and sambar on the side" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Rava Dosa Bites</h3>
+          <p class="card__price">&#8377;180</p>
+        </div>
+        <p class="card__desc">Golden semolina crepes, crisp at the edges, served with coconut chutney and sambar.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&auto=format&fit=crop&q=80" alt="Fluffy pooris served with spiced potato curry" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Poori Bhaji</h3>
+          <p class="card__price">&#8377;140</p>
+        </div>
+        <p class="card__desc">Fluffy fried pooris with spiced potato curry and pickled red onions.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&auto=format&fit=crop&q=80" alt="Masala omelette folded with onions and green chillies on a slice of toasted bread" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Masala Omelette</h3>
+          <p class="card__price">&#8377;120</p>
+        </div>
+        <p class="card__desc">Eggs folded with onions, chillies, and fresh coriander, served with toasted bread.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80" alt="Steamed white idlis in a puddle of hot sambar" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Idli Sambar</h3>
+          <p class="card__price">&#8377;110</p>
+        </div>
+        <p class="card__desc">Soft steamed rice cakes soaked in hot sambar, served in a set of three.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&auto=format&fit=crop&q=80" alt="Airing banana appam with caramelised banana and curry leaves" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Banana Appam</h3>
+          <p class="card__price">&#8377;160</p>
+        </div>
+        <p class="card__desc">Airy fermented rice pancakes with caramelised banana and curry leaves.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__heading">Lunch</h2>
+    <div class="grid">
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&auto=format&fit=crop&q=80" alt="Chicken chettinad in dark pepper gravy beside a folded parotta" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Chicken Chettinad</h3>
+          <p class="card__price">&#8377;320</p>
+        </div>
+        <p class="card__desc">Slow-cooked chicken in fiery pepper and fennel gravy, served with parotta.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80" alt="Tangy fish curry with tamarind and cluster beans served in a steel bowl" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Meen Kuzhambu</h3>
+          <p class="card__price">&#8377;310</p>
+        </div>
+        <p class="card__desc">Tangy fish curry simmered in tamarind juice, cluster beans, and spices.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&auto=format&fit=crop&q=80" alt="Shredded kothu parotta tossed with egg, onion, and rich gravy" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Kothu Parotta</h3>
+          <p class="card__price">&#8377;260</p>
+        </div>
+        <p class="card__desc">Shredded parotta tossed with egg, onion, and a rich meat gravy.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&auto=format&fit=crop&q=80" alt="Sambar rice with tempered dal stew poured over steaming white rice" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Sambar Rice</h3>
+          <p class="card__price">&#8377;190</p>
+        </div>
+        <p class="card__desc">Classic comfort, tempered dal stew poured over a heap of steaming rice.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=600&auto=format&fit=crop&q=80" alt="Chettinad veg thali platter with gravies, rice, papad, and curd" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Chettinad Veg Thali</h3>
+          <p class="card__price">&#8377;300</p>
+        </div>
+        <p class="card__desc">A full platter of gravies, rice, papad, and fresh set curd.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__heading">Snacks</h2>
+    <div class="grid">
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&auto=format&fit=crop&q=80" alt="Crunchy golden murukku spirals piled on a banana leaf" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Murukku</h3>
+          <p class="card__price">&#8377;90</p>
+        </div>
+        <p class="card__desc">Crunchy spiral curls of rice flour with roasted chickpea and sesame.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&auto=format&fit=crop&q=80" alt="Crisp golden bajji fritters with a wedge of spiced potato inside" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Bajji</h3>
+          <p class="card__price">&#8377;80</p>
+        </div>
+        <p class="card__desc">Crispy gram-flour fritters wrapped around soft, spiced potato centres.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600&auto=format&fit=crop&q=80" alt="Vada pav with spiced potato patty tucked inside a soft pav bun" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Vada Pav</h3>
+          <p class="card__price">&#8377;70</p>
+        </div>
+        <p class="card__desc">Bombay favourite, a spiced potato patty tucked in soft pav with chutneys.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&auto=format&fit=crop&q=80" alt="Bhel puri of puffed rice, sev, onions, and tamarind chutney in a paper cup" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Bhel Puri</h3>
+          <p class="card__price">&#8377;90</p>
+        </div>
+        <p class="card__desc">Puffed rice tossed with tangy tamarind, crunchy sev, and fresh onions.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80" alt="Golden flaky egg puff pastry with a spiced onion and egg filling" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Egg Puffs</h3>
+          <p class="card__price">&#8377;75</p>
+        </div>
+        <p class="card__desc">Flaky pastry hugging a spiced onion and egg filling, sold per piece.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__heading">Drinks</h2>
+    <div class="grid">
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80" alt="South Indian filter coffee in a steel davara tumbler and bowl" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Filter Coffee</h3>
+          <p class="card__price">&#8377;60</p>
+        </div>
+        <p class="card__desc">Strong South Indian decoction brewed hot, with a crown of frothy milk.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&auto=format&fit=crop&q=80" alt="Sweet mango lassi topped with a pinch of cardamom and a mint leaf" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Mango Lassi</h3>
+          <p class="card__price">&#8377;110</p>
+        </div>
+        <p class="card__desc">Sweet mango blended with creamy curd and a whisper of cardamom.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80" alt="Tall glass of salted spiced buttermilk with crushed ginger and coriander" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Masala Chaas</h3>
+          <p class="card__price">&#8377;70</p>
+        </div>
+        <p class="card__desc">Spiced buttermilk with ginger, green chilli, and a shower of coriander.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&auto=format&fit=crop&q=80" alt="Fresh green sugarcane juice with lemon and mint over crushed ice" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Sugarcane Juice</h3>
+          <p class="card__price">&#8377;60</p>
+        </div>
+        <p class="card__desc">Freshly pressed cane juice brightened with lemon, mint, and crushed ice.</p>
+      </article>
+      <article class="card">
+        <img class="card__img" src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&auto=format&fit=crop&q=80" alt="Amber ginger lemon tea in a clear glass with a lemon wedge" loading="lazy">
+        <div class="card__row">
+          <h3 class="card__name">Ginger Lemon Tea</h3>
+          <p class="card__price">&#8377;80</p>
+        </div>
+        <p class="card__desc">Fresh ginger-infused black tea with a hit of lemon and honey.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__note">Prices inclusive of taxes</p>
+  </footer>
+</main>
+</body>
+</html>
